@@ -1,36 +1,29 @@
 <template>
     <header class="header">
-        <h1 class="header__title">
-            {{ mode }} Mode
-        </h1>
+        <h1 class="header__title">{{ mode }} Mode</h1>
 
         <ToggleMode :mode="mode" @toggle="$emit('toggle')" />
 
         <nav class="header__nav">
-            <div class="header__nav-link">
-                Home
-            </div>
+            <div class="header__nav-link">Home</div>
 
-            <div class="header__nav-link">
-                About
-            </div>
+            <div class="header__nav-link">About</div>
 
-            <div class="header__nav-link">
-                Portfolio
-            </div>
+            <div class="header__nav-link">Portfolio</div>
 
-            <div class="header__nav-link">
-                Contact
-            </div>
+            <div class="header__nav-link">Contact</div>
         </nav>
     </header>
 </template>
 
 <script>
-import ToggleMode from '../components/ToggleMode.vue';
+import ToggleMode from "../components/ToggleMode.vue";
 
 export default {
-    props: ['mode'],
+    props: {
+        mode: { type: String },
+    },
+
     components: {
         ToggleMode,
     },
@@ -76,5 +69,4 @@ export default {
 .dark .header__nav-link:hover {
     background: #101520;
 }
-
 </style>

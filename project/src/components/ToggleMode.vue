@@ -9,7 +9,11 @@
 
 <script>
 export default {
-   props: ['mode']
+   props: {
+      mode: { type: String },
+   },
+
+   methods: {}
 };
 </script>
 
